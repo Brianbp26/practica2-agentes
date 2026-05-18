@@ -19,7 +19,7 @@ services:
       - CHAT_CONCIERTOS_ID=${CHAT_CONCIERTOS_ID}
       - GROQ_API_KEY=${GROQ_API_KEY}
     volumes:
-      - n8n_data:/home/node/.n8n
+      - n8n_data:/root/.n8n
       - ./data/comfyui/output:/root/.n8n-files
     depends_on:
       - scrapper
