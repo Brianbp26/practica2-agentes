@@ -8,11 +8,11 @@ This project implements an intelligent system for the automation, extraction, an
 
 The architecture orchestrates multiple local Docker microservices via **n8n**, delegating cognitive logic to **Llama 3.1 (via Groq)** and storing historical execution data in a local **MinIO (S3)** bucket. It also integrates **ComfyUI** for dynamic, real-time soundtrack generation using HuggingFace's **MusicGen** model.
 
-The ecosystem is completely containerized and decoupled[cite: 1]:
-- **Scrapper Microservice:** Built with FastAPI and Playwright for on-demand data extraction from IMDb and eCartelera[cite: 1].
-- **Orchestration:** n8n acts as the central hub triggering workflows via Telegram webhooks and schedules[cite: 1].
-- **Generative AI:** Groq (Llama 3.1 8b) is used for intent classification, text formatting, and spoiler-checking[cite: 1].
-- **Audio Generation Pipeline:** ComfyUI generates audio locally via CPU optimized with FP32, using a shared volume directly bridged to n8n to instantly send the `.wav` files via Telegram[cite: 1].
+The ecosystem is completely containerized and decoupled:
+- **Scrapper Microservice:** Built with FastAPI and Playwright for on-demand data extraction from IMDb and eCartelera.
+- **Orchestration:** n8n acts as the central hub triggering workflows via Telegram webhooks and schedules.
+- **Generative AI:** Groq (Llama 3.1 8b) is used for intent classification, text formatting, and spoiler-checking.
+- **Audio Generation Pipeline:** ComfyUI generates audio locally via CPU optimized with FP32, using a shared volume directly bridged to n8n to instantly send the `.wav` files via Telegram.
 
 ### 👨‍💻 My Contribution & Role
 Within this collaborative project, my primary focus was on the orchestration, automation, and user-interface layer. My specific hands-on contributions included:
